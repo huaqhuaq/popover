@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="wrapper" class="wrapper">
+    <button id="clickMe">点我</button>
+    <div id="popover" class="popover">
+      <input type="checkbox"> 浮层
+    </div>
+  </div>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script>
+    clickMe.addEventListener('click', function(e) {
+      popover.style.display = 'block'
+    })
+    wrapper.addEventListener('click',function(e){
+      e.stopPropagation()
+    })
+    document.addEventListener('click', function() {
+      popover.style.display = 'none'
+    })
+      // $(clickMe).on('click', function() {
+      //   $(popover).show()
+      //   setTimeout(function() {
+      //     $(document).one('click', function() {
+      //       $(popover).hide()
+      //     })
+      //   }, 0)
+      // })
+      
+
+  </script>
+</body>
+</html>
